@@ -1,0 +1,9 @@
+<h2 class="page-header"><%=type.name%></h2>
+<div class="btn-row">
+        <a class="btn btn-primary" href= '/admin/types/<%= type.id%>/edit'>Edit</a>
+        <%- include('./../partials/deleteForm',{url:`/admin/types/${type.id}`})%>
+</div>
+        <% if(productOfType.length > 0){%>
+        <h2 class="page-header">Các sản phẩm tương ứng</h2>
+        <%- include('./../partials/bookGrid',{products: productOfType})%>
+        <%}%>

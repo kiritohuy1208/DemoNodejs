@@ -1,0 +1,8 @@
+<h2 class="page-header">Edit loại sản phẩm</h2>
+<form action="/admin/authors/<%= type.id%>?_method=PUT" method="POST">
+    <%- include('_form_field.ejs')%>
+    <div class="form-row form-row-end btn-row">
+        <a class="btn btn-danger" href="/admin/types/<%= type.id %>">Cancel</a>
+        <button class="btn btn-primary" type="submit">Update</button>
+      </div>
+</form>

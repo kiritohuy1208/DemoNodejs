@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+	<title>Divisima | eCommerce Template</title>
+	<meta charset="UTF-8">
+	<meta name="description" content=" Divisima | eCommerce Template">
+	<meta name="keywords" content="divisima, eCommerce, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="./../../public/img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+	<link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet" />
+     <!-- Filepond review  -->
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+    <!-- Resize image Filepond -->
+  
+   
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="/css/flaticon.css"/>
+	<link rel="stylesheet" href="/css/slicknav.min.css"/>
+	<link rel="stylesheet" href="/css/jquery-ui.min.css"/>
+	<link rel="stylesheet" href="/css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="/css/animate.css"/>
+	<link rel="stylesheet" href="/css/style.css"/>
+	<link rel="stylesheet" href="/stylesheets/main.css">
+	<script defer src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+    <!-- Cdn Filepond -->
+    <script defer src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <!-- File encode filePond-->
+    <script defer src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+    <!-- Filepond review -->
+    <script defer src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+    <!-- Config js of person -->
+    <script defer src="/js/fileUpload.js"></script>
+
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<%- include('./../partials/header_admin.ejs')%>
+	<div class= "container">
+        <div class="inner-container">
+            <%- include('../partials/errorMessage.ejs')%>
+			<%- include('../partials/errorMessage.ejs')%>
+	
+
+   			 <%-body%>
+            
+           
+        </div>
+    </div>
+	
+	
+
+	<!-- Footer section -->
+	<%- include('./../partials/footer.ejs')%>
+	<!-- Footer section end -->
+
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="/js/jquery-3.2.1.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/jquery.slicknav.min.js"></script>
+	<script src="/js/owl.carousel.min.js"></script>
+	<script src="/js/jquery.nicescroll.min.js"></script>
+	<script src="/js/jquery.zoom.min.js"></script>
+	<script src="/js/jquery-ui.min.js"></script>
+	<script src="/js/main.js"></script>
+
+</body>
+</html>

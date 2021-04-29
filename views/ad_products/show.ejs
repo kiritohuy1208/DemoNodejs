@@ -1,0 +1,40 @@
+<h2 class="page-header"><%= product.name%></h2>
+<div class="book-details">
+    <div>
+      <!--  -->
+        <%for(i=0;i<product.arrayImage.length;i++){%>
+        <img src ="data:<%=product.arrayImage[i].coverImageType%>;charset=utf-8;base64,<%= product.arrayImage[i].coverImage.toString('base64')%>" height="200" width="150"/>
+        
+     <%}%>
+     <!-- <div class="book-details-btn-grid">
+        <a class="btn btn-primary" href="/books/<%= product.id %>/edit">Edit</a>
+        <%- include('./../partials/deleteForm',{url:`/admin/books/${product.id}`})%>
+        <a class="btn btn-primary book-details-author-button " href="/authors/<%= product.product_type.id%>">Xem loại sp</a>
+    </div> -->
+    <div class="author-row">
+        <div class="btn-row">
+            <a class="btn btn-primary" href="/admin/products/<%= product.id %>/edit">Edit</a>
+            <%- include('./../partials/deleteForm',{url:`/admin/products/${product.id}`})%>
+            <a class="btn btn-primary book-details-author-button " href="/admin/types/<%= product.product_type.id%>">Xem loại sp</a>
+        </div>
+    </div>
+   
+    <div class="book-details-grid">
+    
+        <div class="book-details-label">Loại sp:</div>
+        <div><%= product.product_type.name %></div>
+        <div class="book-details-label">Ngày tạo:</div>
+        <div><%= product.publishDate.toDateString() %></div>
+        <div class="book-details-label">Giá bán:</div>
+        <div><%= product.price %></div>
+        <div class="book-details-label">Mô tả:</div>
+        <div><%= product.description %></div>
+    </div>
+
+
+    </div>
+    
+</div>
+       
+           
+

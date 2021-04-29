@@ -1,0 +1,27 @@
+<h2 class="page-header">Tất cả loại sản phẩm</h2>
+<form action='/admin/authors' method = "GET">
+    <div class="form-row">
+        <div class="form-item">
+            <label>Tìm loại sản phẩm</label>
+            <input type="text" name="name" value="<%= searchOption.name %>"/>
+        
+        </div>
+    </div>
+    <div class="form-row form-row-end">
+        <button class="btn btn-primary" type="submit">Search</button>
+      </div>
+</form>
+<div>
+    <br>
+   <% types.forEach(type=>{ %>
+        <div class="author-row">
+            <div class="author-name"><%= type.name %></div>
+            <div class="btn-row">
+                <a class="btn btn-primary"href="types/<%= type.id%>">View</a>
+                <a class="btn btn-danger" href="types/<%= type.id%>/edit">Edit</a>
+            
+                <%- include('./../partials/deleteForm.ejs',{url:`/admin/types/${type.id}`})%>
+            </div>
+        </div>
+    <% }) %>
+</div>
